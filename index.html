@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jain Military Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Jain Military Store</h1>
+    <p>Your Trusted Source for Army & Tactical Gear</p>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Jain Military Store. We specialize in military uniforms, boots, belts, badges, and tactical gear,Nmaplate,ribbon and medal. Located in [BABINA], we’ve proudly served security forces and civilians for over 10 years.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>Army Boots</h3>
+        <p>Durable and waterproof military-grade boots.</p>
+      </div>
+      <div class="product-card">
+  <img src="https://via.placeholder.com/200x200" alt="Army Boots">
+  <h3>Army Boots</h3>
+  <p>Durable leather boots for all weather.</p>
+  <p class="price">₹1499</p>
+  <button onclick="openModal(
+    'Army Boots',
+    'High-quality leather boots with anti-slip sole, perfect for security personnel and trekking. Sizes: 7 to 10.',
+    1499,
+    'https://via.placeholder.com/400x400'
+  )">View Details</button>
+  <a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Army%20Boots%20(Size%209)" target="_blank">
+    <button style="margin-top: 10px;">Order on WhatsApp</button>
+  </a>
+</div>
+
+<div class="product-card">
+  <img src="https://via.placeholder.com/200x200" alt="Tactical Backpack">
+  <h3>Tactical Backpack</h3>
+  <p>40L waterproof camo trekking backpack.</p>
+  <p class="price">₹1199</p>
+  <button onclick="openModal(
+    'Tactical Backpack',
+    'Spacious, waterproof, and durable. Includes multiple compartments and external straps. Ideal for travel and army training.',
+    1199,
+    'https://via.placeholder.com/400x400'
+  )">View Details</button>
+  <a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Tactical%20Backpack" target="_blank">
+    <button style="margin-top: 10px;">Order on WhatsApp</button>
+  </a>
+</div>
+
+<div class="product-card">
+  <img src="https://via.placeholder.com/200x200" alt="Army Cap">
+  <h3>Army Cap</h3>
+  <p>Camouflage cotton army cap.</p>
+  <p class="price">₹199</p>
+  <button onclick="openModal(
+    'Army Cap',
+    'Soft and breathable army pattern cap, made with high-quality cotton. Ideal for field use and daily wear.',
+    199,
+    'https://via.placeholder.com/400x400'
+  )">View Details</button>
+  <a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Army%20Cap" target="_blank">
+    <button style="margin-top: 10px;">Order on WhatsApp</button>
+  </a>
+</div>
+>
+
+  <section id="payments">
+    <h2>Payments & Orders</h2>
+    <p>We accept orders via phone, WhatsApp, and UPI payments.</p>
+    <p><strong>Phone:</strong> +919452830691</p>
+    <p><strong>UPI:</strong> 1603sakshamjain@axl</p>
+    <p><strong>Location:</strong> [1244 IN FRONT OF BABINA RAILWAY STATION BABINA]</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jain Military Store. All rights reserved.</p>
+  </footer><div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle">Product Title</h3>
+    <img id="modalImage" src="" alt="" style="width: 100%; border-radius: 8px; margin: 10px 0;">
+    <p id="modalDesc">Product description goes here...</p>
+    <p id="modalPrice" style="font-weight: bold; color: green;"></p>
+  </div>
+</div>
+
+<script>
+  function openModal(title, desc, price, imageUrl) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDesc').innerText = desc;
+    document.getElementById('modalPrice').innerText = "₹" + price;
+    document.getElementById('modalImage').src = imageUrl;
+    document.getElementById('productModal').style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById('productModal').style.display = "none";
+  }
+
+  // Close on click outside
+  window.onclick = function(event) {
+    let modal = document.getElementById('productModal');
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>
